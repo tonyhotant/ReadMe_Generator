@@ -1,0 +1,23 @@
+{
+  "name": "readme_generator",
+  "version": "1.0.0",
+  "description": "Github generator with some user questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonyhotant/ReadMe_Generator.git"
+  },
+  "author": "Lisheng Yu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonyhotant/ReadMe_Generator/issues"
+  },
+  "homepage": "https://github.com/tonyhotant/ReadMe_Generator#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "inquirer": "^7.1.0"
+  }
+}
