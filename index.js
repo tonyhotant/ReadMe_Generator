@@ -18,10 +18,11 @@ const questions = [
     name: "description",
     message: "What is your project description?",
   },
+  //more questions required
 ];
 
-function writeToFile(file) {
-  return fs.writeFile("output.md", file, (err) => {
+function writeToFile(file, fileName) {
+  return fs.writeFile(`${fileName}.md`, file, (err) => {
     if (err) console.error(err);
     else console.log("File written");
   });
@@ -36,11 +37,13 @@ inquirer
   .then((answers) => {
     console.log(answers);
 
-    const markDown = generateMarkdown(answers);
+    const fileName = answers.name;
 
-    console.log(markDown);
+    const markdownFile = generateMarkdown(answers);
 
-    writeToFile(markDown);
+    console.log(markdownFile);
+
+    writeToFile(markdownFile, fileName);
   })
   .catch((error) => {
     if (error.isTtyError) {
