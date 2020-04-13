@@ -3,47 +3,44 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 const questions = [
-  //prompt user github username
   {
-    type: 'input',
-    name: 'name',
-    message: 'Please enter your Github username',
+    type: "input",
+    name: "name",
+    message: "Please enter your Github username",
   },
   {
-    type: 'input',
-    name: 'title',
-    message: 'What is your project title?',
+    type: "input",
+    name: "title",
+    message: "What is your project title?",
   },
   {
-    type: 'input',
-    name: 'description',
-    message: 'What is your project description?',
+    type: "input",
+    name: "description",
+    message: "What is your project description?",
   },
 ];
 
-function writeToFile(newFile, answers) {
- return fs.writeFile('output.md', answers, (err) => {
-   if (err) console.error(err);
-   else console.log('File written');
- });
+function writeToFile(file) {
+  return fs.writeFile("output.md", file, (err) => {
+    if (err) console.error(err);
+    else console.log("File written");
+  });
 }
 
-function init() {
-
-}
+function init() {}
 
 init();
 
-
 inquirer
-  .prompt(
-    questions
-  )
-  .then(() => {
-    generateMarkdown();
+  .prompt(questions)
+  .then((answers) => {
+    console.log(answers);
 
-    writeToFile();
+    const markDown = generateMarkdown(answers);
 
+    console.log(markDown);
+
+    writeToFile(markDown);
   })
   .catch((error) => {
     if (error.isTtyError) {
