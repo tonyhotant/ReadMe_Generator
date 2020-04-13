@@ -25,7 +25,7 @@ The README will be populated with the following:
 
 Following the [common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates), we can frame this challenge as follows:
 
-```
+```user story
 AS A developer
 
 I WANT a README generator
@@ -58,14 +58,13 @@ When creating an open source project on GitHub, it is important to have a qualit
 
 * The generated README includes 1 badge that's specific to the repository.
 
-```
+```user story
 GIVEN the developer has a GitHub profile and a repository
 
 WHEN prompted for the developer's GitHub username and repo specific information
 
 THEN a README for the repo is generated
 ```
-- - -
 
 ## Commit Early and Often
 
@@ -97,10 +96,9 @@ You are required to submit the following:
 
 * The URL of the GitHub repository
 
+## Your Project Title
 
-# Your Project Title
-
-## Description 
+## Description
 
 Your GitHub profile is an extremely important aspect of your public identity as a developer. A well-crafted one allows you to show off your work to other developers as well as potential employers. An important component of your GitHub profile—and one that many new developers often overlook—is the README.md file.
 
@@ -114,7 +112,6 @@ If you're new to Markdown, read the GitHub guide on [Mastering Markdown](https:/
 
 If you need an example of a good README, check out [the VSCode repository](https://github.com/microsoft/vscode).
 
-
 ## Table of Contents (Optional)
 
 If your README is very long, add a table of contents to make it easy for users to find what they need.
@@ -124,16 +121,13 @@ If your README is very long, add a table of contents to make it easy for users t
 * [Credits](#credits)
 * [License](#license)
 
-
 ## Installation
 
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
+## Usage
 
-## Usage 
-
-Provide instructions and examples for use. Include screenshots as needed. 
-
+Provide instructions and examples for use. Include screenshots as needed.
 
 ## Credits
 
@@ -143,12 +137,9 @@ If you used any third-party assets that require attribution, list the creators w
 
 If you followed tutorials, include links to those here as well.
 
-
-
 ## License
 
 The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
-
 
 ---
 
@@ -160,7 +151,6 @@ The last section of a good README is a license. This lets other developers know 
 
 Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
 
-
 ## Contributing
 
 If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
@@ -168,8 +158,3 @@ If you created an application or package and would like other developers to cont
 ## Tests
 
 Go the extra mile and write tests for your application. Then provide examples on how to run them.
-
-
----
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-
