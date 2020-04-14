@@ -5,24 +5,55 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
   {
     type: "input",
-    name: "name",
-    message: "Please enter your Github username",
+    name: "Title",
+    message: "Please enter your project title",
   },
   {
     type: "input",
-    name: "title",
-    message: "What is your project title?",
+    name: "Description",
+    message: "Please enter the description of your project",
   },
   {
     type: "input",
-    name: "description",
-    message: "What is your project description?",
+    name: "Installation",
+    message: "Please describe how to install your software",
   },
-  //more questions required
+  {
+    type: "input",
+    name: "Usage",
+    message: "Please describe how to use your software",
+  },
+  {
+    type: "input",
+    name: "License",
+    message: "Please enter the license for your project",
+  },
+  {
+    type: "input",
+    name: "Contributing",
+    message: "Please describe how to contribute to your project",
+  },
+  {
+    type: "input",
+    name: "Tests",
+    message: "Please describe how to test your project",
+  },
+  {
+    type: "input",
+    name: "Questions",
+    message: "Please enter the questions of your project",
+  },
+  {
+    type: "input",
+    name: "Name",
+    message: "Please enter your GitHub username",
+  },
 ];
 
 function writeToFile(file, fileName) {
+
   return fs.writeFile(`${fileName}.md`, file, (err) => {
+    
     if (err) console.error(err);
     else console.log("File written");
   });
@@ -37,7 +68,7 @@ inquirer
   .then((answers) => {
     console.log(answers);
 
-    const fileName = answers.name;
+    const fileName = answers.Name;
 
     const markdownFile = generateMarkdown(answers);
 
