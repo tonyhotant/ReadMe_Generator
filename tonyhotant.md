@@ -1,12 +1,11 @@
 
+# README.md Generator
 
-//badge
-
-# title
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 ## Description
 
-description
+An app can generate readme file easily
 
 ## Table of Contents
 
@@ -21,28 +20,27 @@ description
 
 ## Installation
 
-install
+npm install
 
 ## Usage
 
-usage
+node index.js
 
 ## License
 
-license
+MIT
 
 ## Contributing
 
-contribute
+Contributor Covenant v2.0
 
 ## Tests
 
-tests
+npm run test
 
 ## Questions
 
-questions
+contact me on lishengyu1986@gmail.com
 
 ![GitHub Profile](link)
 [GitHub Email](link)
-

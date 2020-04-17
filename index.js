@@ -6,54 +6,80 @@ const questions = [
   {
     type: "input",
     name: "Title",
-    message: "Please enter your project title",
+    message: "Please enter your project title: ",
+    default: () => {
+      return "README.md Generator";
+    },
   },
   {
     type: "input",
     name: "Description",
-    message: "Please enter the description of your project",
+    message: "Enter the description of your project: ",
+    default: () => {
+      return "An app can generate readme file easily";
+    },
   },
   {
     type: "input",
     name: "Installation",
-    message: "Please describe how to install your software",
+    message: "How to install your software? ",
+    default: () => {
+      return "npm install";
+    },
   },
   {
     type: "input",
     name: "Usage",
-    message: "Please describe how to use your software",
+    message: "How to use your software? ",
+    default: () => {
+      return "node index.js";
+    },
   },
   {
-    type: "input",
+    type: "list",
     name: "License",
-    message: "Please enter the license for your project",
+    message: "Enter the license for your project: ",
+    choices: ["Apache", "GPLv3", "MIT", "ISC"],
+    default: () => {
+      return "MIT";
+    },
   },
   {
     type: "input",
     name: "Contributing",
-    message: "Please describe how to contribute to your project",
+    message: "What is the Code of Conduct for your project? ",
+    default: () => {
+      return "Contributor Covenant v2.0";
+    },
   },
   {
     type: "input",
     name: "Tests",
-    message: "Please describe how to test your project",
+    message: "How to test your project? ",
+    default: () => {
+      return "npm run test";
+    },
   },
   {
     type: "input",
     name: "Questions",
-    message: "Please enter the questions of your project",
+    message: "How to ask questions about your project",
+    default: () => {
+      return "contact me on lishengyu1986@gmail.com";
+    },
   },
   {
     type: "input",
     name: "Name",
-    message: "Please enter your GitHub username",
+    message: "Enter your GitHub username",
+    default: () => {
+      return "tonyhotant";
+    },
   },
 ];
 
 function writeToFile(file, fileName) {
-
   return fs.writeFile(`${fileName}.md`, file, (err) => {
-    
     if (err) console.error(err);
     else console.log("File written");
   });
