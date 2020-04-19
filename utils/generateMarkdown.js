@@ -53,9 +53,7 @@ ${data.Tests}
 
 ## Questions
 
-<img src="${imgURL}" alt="avatar" style="border-radius: 16px" width="30" />
-
-![avatar](${imgURL})
+![avatar](${imgURL} =100X100)
 
 If you have any questions about the repo, open an issue in [${data.Title}](https://github.com/${data.Name}/${data.Title}) or contact directly at <${data.Email}>.
 `;
