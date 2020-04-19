@@ -1,6 +1,10 @@
 const fs = require("fs");
+const util = require("util");
+const axios = require("axios");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+
+const writeFileAsync = util.promisify(fs.writeFile);
 
 const questions = [
   {
@@ -8,7 +12,7 @@ const questions = [
     name: "Title",
     message: "Please enter your project title: ",
     default: () => {
-      return "README.md Generator";
+      return "ReadMe_Generator";
     },
   },
   {
@@ -16,7 +20,7 @@ const questions = [
     name: "Description",
     message: "Enter the description of your project: ",
     default: () => {
-      return "An app can generate readme file easily";
+      return "Application can generate README file easily";
     },
   },
   {
@@ -62,10 +66,10 @@ const questions = [
   },
   {
     type: "input",
-    name: "Questions",
-    message: "How to ask questions about your project",
+    name: "Email",
+    message: "What is the best Email for contact? ",
     default: () => {
-      return "contact me on lishengyu1986@gmail.com";
+      return "lishengyu1986@gmail.com";
     },
   },
   {
@@ -78,35 +82,34 @@ const questions = [
   },
 ];
 
-function writeToFile(file, fileName) {
-  return fs.writeFile(`${fileName}.md`, file, (err) => {
-    if (err) console.error(err);
-    else console.log("File written");
+function promptUser() {
+  return inquirer.prompt(questions);
+}
+
+function avatarQuery(data) {
+  const queryURL = `https://api.github.com/users/${data.Name}`;
+
+  return axios.get(queryURL).then(function (response) {
+    const imgURL = response.data.avatar_url;
+    return imgURL;
   });
 }
 
-function init() {}
+async function init() {
+  console.log("Welcome to use README Generator! ");
+  try {
+    const answers = await promptUser();
+
+    const imgURL = await avatarQuery(answers);
+
+    const markdownFile = generateMarkdown(answers, imgURL);
+
+    await writeFileAsync("README.md", markdownFile);
+
+    console.log("Successfully wrote to README.md");
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 init();
-
-inquirer
-  .prompt(questions)
-  .then((answers) => {
-    console.log(answers);
-
-    const fileName = answers.Name;
-
-    const markdownFile = generateMarkdown(answers);
-
-    console.log(markdownFile);
-
-    writeToFile(markdownFile, fileName);
-  })
-  .catch((error) => {
-    if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-    } else {
-      // Something else when wrong
-      console.error(error);
-    }
-  });
