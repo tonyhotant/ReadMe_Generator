@@ -1,6 +1,7 @@
 
 # ReadMe_Generator
 
+[JS badge](https://img.shields.io/github/languages/top/tonyhotant/ReadMe_Generator)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 ## Description
@@ -52,6 +53,6 @@ npm run test
 
 ## Questions
 
-![avatar](https://avatars1.githubusercontent.com/u/32546592?v=4 =100X100)
+<img src="https://avatars1.githubusercontent.com/u/32546592?v=4" alt="avatar" style="border-radius: 16px" width="30" />
 
 If you have any questions about the repo, open an issue in [ReadMe_Generator](https://github.com/tonyhotant/ReadMe_Generator) or contact directly at <lishengyu1986@gmail.com>.
