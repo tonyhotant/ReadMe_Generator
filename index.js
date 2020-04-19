@@ -89,7 +89,7 @@ function promptUser() {
 function avatarQuery(data) {
   const queryURL = `https://api.github.com/users/${data.Name}`;
 
-  return axios.get(queryURL).then(function (response) {
+  return axios.get(queryURL).then((response) => {
     const imgURL = response.data.avatar_url;
     return imgURL;
   });
