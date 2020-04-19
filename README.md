@@ -52,6 +52,8 @@ npm run test
 
 ## Questions
 
-![GitHub Profile](<img src="https://avatars1.githubusercontent.com/u/32546592?v=4" alt="avatar" style="border-radius: 16px" width="30" />)
+<img src="https://avatars1.githubusercontent.com/u/32546592?v=4" alt="avatar" style="border-radius: 16px" width="30" />
 
-If you have any questions about the repo, open an issue in [ReadMe_Generator](https://api.github.com/tonyhotant/ReadMe_Generator) or contact directly at <lishengyu1986@gmail.com>.
+![avatar](https://avatars1.githubusercontent.com/u/32546592?v=4)
+
+If you have any questions about the repo, open an issue in [ReadMe_Generator](https://github.com/tonyhotant/ReadMe_Generator) or contact directly at <lishengyu1986@gmail.com>.
