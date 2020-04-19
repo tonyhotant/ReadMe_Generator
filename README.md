@@ -56,5 +56,5 @@ npm run test
 
 <img src="https://avatars1.githubusercontent.com/u/32546592?v=4" alt="avatar" style="border-radius: 16px" width="50" />
 
-If you have any questions about the repo, open an issue in [ReadMe_Generator](https://github.com/tonyhotant/ReadMe_Generator)
+If you have any questions about the repo, open an issue in [ReadMe_Generator](https://github.com/tonyhotant/ReadMe_Generator) 
 or contact directly at <lishengyu1986@gmail.com>.
