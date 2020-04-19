@@ -2,7 +2,7 @@ function generateMarkdown(data, imgURL) {
   return `
 # ${data.Title}
 
-[JS badge](https://img.shields.io/github/languages/top/${data.Name}/${data.Title})
+![GitHub top language](https://img.shields.io/github/languages/top/${data.Name}/${data.Title})
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 ## Description
@@ -54,7 +54,7 @@ ${data.Tests}
 
 ## Questions
 
-<img src="${imgURL}" alt="avatar" style="border-radius: 16px" width="30" />
+<img src="${imgURL}" alt="avatar" style="border-radius: 16px" width="50" />
 
 If you have any questions about the repo, open an issue in [${data.Title}](https://github.com/${data.Name}/${data.Title}) or contact directly at <${data.Email}>.
 `;
