@@ -1,9 +1,7 @@
 const generateMarkdown = require("../utils/generateMarkdown");
 
-describe("generateMarkdown", () => {
-  describe("Initialization", () => {
-    it("should return a new readme file with all info populated", () => {
-      const data = `{
+test("generateMarkdown", () => {
+  const data = {
   Title: 'ReadMe_Generator',
   Description: 'Application can generate README file easily',
   Installation: 'npm install',
@@ -13,11 +11,11 @@ describe("generateMarkdown", () => {
   Tests: 'npm run test',
   Email: 'lishengyu1986@gmail.com',
   Name: 'tonyhotant'
-}`;
+};
 
-      const imgURL = `https://avatars1.githubusercontent.com/u/32546592?v=4`;
+  const imgURL = "https://avatars1.githubusercontent.com/u/32546592?v=4";
 
-      const expect = `
+  const expected = `
 # ReadMe_Generator
 
 ![GitHub top language](https://img.shields.io/github/languages/top/tonyhotant/ReadMe_Generator)
@@ -78,9 +76,7 @@ If you have any questions about the repo, open an issue in [ReadMe_Generator](ht
 or contact directly at <lishengyu1986@gmail.com>.
 `;
 
-      const result = generateMarkdown(data, imgURL);
+  const result = generateMarkdown(data, imgURL);
 
-      expect(result).toEqual(expect);
-    });
-  });
+  expect(result).toEqual(expected);
 });
